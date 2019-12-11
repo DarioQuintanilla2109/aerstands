@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title  %} | Account Login {% endblock %}
+
+{% block content %}
+<section id="login" class="bg-light py-5">
+  <div class="container">
+    <div class="row">
+          <div class="card-header bg-primary text-white">
+              <div class="login-label"><h7>Sign Up</h7></div>
+            <hr>
+            <div class="card-body">
+                <!-- Alerts -->
+                {% include 'partials/_alerts.html' %}
+                <form action="{% url 'signup' %}" method="post">
+                    {% csrf_token %}
+                  <div class="form-group">
+                  <label for="first_name">First Name</label>
+                  <input type="text" name="first_name" class="form-control cred" required>
+                </div>
+                <div class="form-group">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" name="last_name" class="form-control cred" required>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" class="form-control cred" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control cred" required>
+                </div>
+                <div class="form-group">
+                  <label for="password2">Confirm Password</label>
+                  <input type="password" name="password2" class="form-control cred" required>
+                </div>
+                <div class="form-group">
+                  <label for="company">Company</label>
+                  <input type="company" name="company" class="form-control cred" required>
+                </div>
+                <div class="form-group">
+                  <label for="As">Sign Up As</label>
+                  <select name="signup_as" selected="true"class="form control cred">
+                    <option value="Lessor">Lessor</option>
+                    <option value="Lessee">Lessee</option>
+                  </select>
+                </div>
+
+                <input type="submit" value="Continue" class="btn btn-secondary btn-block">
+                <p class="login-option">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+{% endblock %}

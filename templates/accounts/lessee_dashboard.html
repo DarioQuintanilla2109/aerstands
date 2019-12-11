@@ -1,0 +1,100 @@
+{% extends 'baseDash.html' %}
+
+{% block title %} | User Dashboard {% endblock %}
+
+{% block content %}
+<div class="dashpage">
+    <div class="left-section">
+        <div class="avatar">
+            {% if lessees %}
+                {% for lessee in lessees %}
+                    <span>Hello, {{ lessee.first_name }}</span>
+                    <div class="avatar-photo">
+                        <div class="rounded-circle mb-3">
+                            <img src="{{ lessee.photo.url }}" alt="" class="image">
+                            <div class="edit_avatar">
+                                <!--<a href=""><i class="fas fa-edit"></i></a>-->
+                                <input type="file" id="file" accept="image/*" name="photo_upload"/>
+                                    <label for="file" class="btn-3">
+                                        <span><i class="fas fa-camera"></i></span>
+                                    </label>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="side-nav">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="{% url 'index' %}">
+                            <span><i class="fas fa-home"></i></span>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="far fa-clipboard"></i></span>
+                            <span>Lease Stands</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fas fa-users"></i></span>
+                            <span>Lessors</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fas fa-user"></i></span>
+                            <span>Account</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="container">
+            <div class="row dashBG">
+                <div class="widget">
+					<div class="title">Messages</div>
+					<div class="chart"></div>
+				</div>
+				<div class="widget">
+					<div class="title">Lease Stands</div>
+					<div class="chart"></div>
+				</div>
+				<div class="widget">
+					<div class="title">Stands Already on Lease</div>
+					<div class="chart"></div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="main-footer" class="py-4 bg-primary text-white text-center">
+  <div class="social">
+    <a href="#">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  <p></p>
+  <p>Copyright &copy; Aerstands</p>
+</footer>
+
+<!-- Alerts -->
+{% include 'partials/_alerts.html' %}
+
+{% endblock %}

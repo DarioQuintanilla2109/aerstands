@@ -1,0 +1,56 @@
+{% extends 'base.html'%} {% block content %}
+{% load static %}
+<!-- Showcase -->
+<section id="showcase">
+  <div class="container text-center">
+    <div class="home-search p-5">
+        <!--
+        <h1 class="display-4 mb-4">
+          Search, Select, Lease!
+        </h1>-->
+    </div>
+  </div>
+</section>
+
+<!-- Listings -->
+<section id="listings" class="py-5">
+  <div class="container">
+    <h4 class="text-center mb-3">OUR PARTNERS AND CUSTOMERS</h4>
+    <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/GA_logo@2x.png' %}" alt="">
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="services" class="py-5 bg-secondary text-white">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h3>Contact Us</h3>
+        <hr>
+        <p>+15615611561</p>
+        <p>info@aerstands.com</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Services</h3>
+        <hr>
+        <a href="#" class="info-link"><p>Leasing and payment</p></a>
+        <a href="#" class="info-link"><p>Shipping</p></a>
+        <a href="#" class="info-link"><p>FAQ</p></a>
+      </div>
+      <div class="col-md-4">
+        <h3>Information</h3>
+        <hr>
+        <a href="#" class="info-link"><p>About Aerstands</p></a>
+        <a href="#" class="info-link"><p>Work With Us</p></a>
+        <a href="#" class="info-link"><p>Terms & Conditions</p></a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

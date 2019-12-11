@@ -1,0 +1,78 @@
+{% extends 'baseDash.html' %}
+
+{% load static %} {% load humanize %}
+
+{% block title %} | User Dashboard {% endblock %}
+
+{% block content %}
+<div class="side-nav">
+    <div class="avatar">
+        {% if lessors %}
+            {% for lessor in lessors %}
+            <span>Hello, {{ lessor.first_name }}</span>
+            <div class="avatar-photo">
+                <img src="{{lessor.photo.url}}" alt="" class="rounded-circle mb-3">
+            </div>
+
+            {% endfor %}
+        {% endif %}
+
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">
+                    <span><i class="fas fa-home"></i></span>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-credit-card-alt"></i></span>
+                    <span>Manage Stands</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-credit-card-alt"></i></span>
+                    <span>Customers</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-credit-card-alt"></i></span>
+                    <span>Account</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="main-content">
+    <div class="container">
+        <h1 class="userdash">Dashb</h1>
+    </div>
+</div>
+<footer id="main-footer" class="py-4 bg-primary text-white text-center">
+  <div class="social">
+    <a href="#">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="#">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+  <p></p>
+  <p>Copyright &copy; Aerstands</p>
+</footer>
+
+  <!-- Alerts -->
+  {% include 'partials/_alerts.html' %}
+
+
+  {% endblock %}

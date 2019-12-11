@@ -1,0 +1,762 @@
+.avatar {
+    color: white;
+    padding: 10px;
+    background-color: #25272b;
+    text-align: center;
+    width: 200px;
+}
+
+.bell {
+    padding-top: 15px;
+    transform: translateY(-8px);
+}
+
+.blend strong {
+    color: #202122;
+}
+
+.dashBG {
+  flex: 1 1 auto;
+  background-color: #0e1112;
+}
+
+[type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[type="file"] + label {
+    background-color: #000;
+        border-radius: 4rem;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        height: 0rem;
+        line-height: 2rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        transition: background-color 0.3s;
+}
+
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+    background-color: #f15d22;
+}
+
+[type="file"]:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+.avatar-photo {
+    padding: 0px;
+    height: 50%;
+    margin-bottom: 10px;
+}
+
+.mb-3:hover .image {
+    opacity: 0.6;
+}
+
+.mb-3:hover .edit_avatar {
+    opacity: 1;
+}
+
+.image {
+    border-radius: 100%;
+    margin-left: 30px;
+    transition: 0.3s ease;
+    backface-visibility: hidden;
+    height: 100%;
+}
+
+.edit_avatar {
+    transition: .3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 155px;
+    left: 95px;
+    transform: translate(-21%, -7%);
+    -ms-transform: translate(-21%, -7%);
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+}
+
+.coldash {
+    background-color: #303338;
+    height: 100px;
+}
+
+.dashpage {
+    display: flex;
+}
+
+.left-section {
+    background-color: #303338;
+    width: max-content;
+}
+
+.right-section {
+    background-color: #0e1112;
+    width: -webkit-fill-available;
+    color: white;
+    display: flex;
+    padding: 40px;
+}
+
+.btn-secondary {
+  color: black !important; }
+
+  .cred {
+      width: -webkit-fill-available;
+      background-color: #151617;
+      margin: 0px;
+      border: none;
+      color: white;
+  }
+
+.cred:focus {
+    width: -webkit-fill-available;
+    background-color: #151617;
+    margin: 0px;
+}
+
+.cred::placeholder {
+    width: -webkit-fill-available;
+    color: #151617;
+    margin: 0px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #151617 inset;
+  transition: 5000s ease-in-out 0s;
+}
+
+
+select.cred:focus::-ms-value {
+  background-color: #151617; }
+
+.h7 {
+    text-align: center;
+}
+
+.login-label {
+    text-align: center;
+}
+
+u {
+    font-size: 12px;
+    text-align: center;
+}
+
+.forgot-pass {
+    color: white;
+    text-align: center;
+}
+
+/* Styling Checkbox Starts */
+.checkbox-label {
+    display: block;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    clear: both;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    height: 16px;
+    width: 16px;
+    background-color: #151617;
+    border-radius: 3px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    border: 0.5px solid #FFFFFF;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom {
+    background-color: #222224;
+    border-radius: 3px;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity:1;
+    border: 0.5px solid #FFFFFF;
+}
+
+
+.checkbox-label .checkbox-custom::after {
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 3px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid #95FF00;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity:1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+
+.checkbox-label input:checked ~ .checkbox-custom::after {
+  -webkit-transform: rotate(45deg) scale(1);
+  -ms-transform: rotate(45deg) scale(1);
+  transform: rotate(45deg) scale(1);
+  opacity:1;
+  left: 7px;
+  top: -2px;
+  width: 6px;
+  height: 12px;
+  border: solid #95FF00;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.dash-header {
+    background-color: red;
+}
+
+.forgot-group-left {
+    display: none;
+    text-align: center;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.forgot-group-right {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-option {
+    margin-top: 20px;
+    font-size: 12px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+
+img {
+  width: 100%; }
+
+  .filter {
+      background-color: #333639;
+  }
+
+  .filter-search {
+      margin-right: 25px;
+      width: 15%;
+      height: calc(2.25rem + 2px);
+      color: #dcdcdc;
+      background-color: #495057;
+      border-radius: 0.25rem;
+  }
+
+  .filter-stands {
+      background-color: #5c636b;
+      padding: 5px;
+      border-radius: 5px;
+      width: 10%;
+      text-align: center;
+      font-size: 17px;
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: silver;
+    opacity: 5; /* Firefox */
+  }
+
+  h10 {
+      color: #dee2e6;
+  }
+
+  h12 {
+      font-size: 12px;
+  }
+
+  /* Hide the browser's default checkbox */
+.Remember-me {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.side-nav {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: #303338;
+	z-index: 1;
+}
+.side-nav.visible {
+	display: block;
+}
+.side-nav ul {
+	margin: 0;
+	padding: 0;
+}
+.side-nav ul li {
+	padding: 16px 16px;
+	border-bottom: 1px solid #474d54;
+	position: relative;
+}
+.side-nav ul li.active:before {
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+}
+.side-nav ul li a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+}
+.side-nav ul li i {
+	color: #0497df;
+	min-width: 20px;
+	text-align: center;
+}
+.side-nav ul li span:nth-child(2) {
+	margin-left: 10px;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.Remember-me:hover ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.Remember-me:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.Remember-me:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.Remember-me .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+  .Announcement {
+      color: white;
+      text-align: center;
+      font-family: Arial;
+      font-size: 30px;
+      padding-top: 30px;
+  }
+
+  .stand {
+    flex: 1 1 auto;
+    margin-bottom: 20px;
+    background-color: #2D3438;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .lease {
+    height: 20%;
+    text-align: center;
+    background-color: chartreuse;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+  }
+
+  .lease-now:hover {
+      text-decoration: none;
+  }
+
+  .column {
+      float: left;
+      color: white;
+}
+
+.left, .middle {
+    width: 28%;
+}
+
+.right {
+    width: 16%;
+    background-color: #222629;
+    color: white;
+}
+
+.main-content {
+	padding: 40px;
+	margin-bottom: 50px;
+	padding: 0;
+	height: 100%;
+}
+.main-content .title {
+	background-color: #0e1112;
+	padding: 10px 20px;
+	font-weight: 700;
+	color: white;
+	font-size: 25px;
+}
+
+.price {
+    text-align: center;
+    padding-top: 20px;
+    height: 80%;
+    padding-bottom: 40px;
+}
+
+.logo {
+  width: 200px;
+  font-family: "Helvetica Neue";
+  margin-left: 51%;
+  transform: translateX(-50%);}
+
+.navbar {
+  opacity: 0.95;
+  text-transform: uppercase; }
+
+  .main {
+  	display: flex;
+  	flex-flow: row wrap;
+      height: -webkit-fill-available;
+      padding: 40px;
+  }
+
+  .widget {
+    flex-basis: 300px;
+  	flex-grow: 10;
+  	height: 300px;
+  	margin: 15px;
+  	border-radius: 6px;
+  	background-color: #303338;
+  	position: relative;
+  }
+  .widget .title {
+  	background-color: #3f4248;
+  	border-bottom: 1px solid #dfe4ec;
+  	padding: 10px;
+  	border-top-left-radius: 6px;
+  	border-top-right-radius: 6px;
+  	color: #95ff00;
+  	font-weight: 600;
+  }
+
+  @media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+    }
+    .stand {
+        width: 70%;
+        transform: translateX(25%);
+    }
+    .dashBG{
+        width: 100%;
+        transform: translateX(5%);
+    }
+    .price {
+        height: 70%;
+    }
+    .lease {
+        height: 30%;
+    }
+    .right-section {
+        display: block;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+      .dashBG{
+          width: 130%;
+          transform: translateX(-5%);
+      }
+  }
+
+  .userdash {
+      color: white;
+      text-align: center;
+  }
+
+  @media screen and (min-width: 600px) {
+  	.header {
+  		background-color: #35475e;
+  		z-index: 1;
+  	}
+
+  	.side-nav {
+  		display: block;
+  		width: 200px;
+  		/*z-index: 2;*/
+  	}
+    .main-content {
+        margin-left: 100px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+  	.side-nav {
+  		width: 200px;
+  	}
+  	.side-nav ul li span:nth-child(2) {
+  		display: inline-block;
+  	}
+  	.side-nav ul li i {
+  		font-size: 16px;
+  	}
+  	.side-nav ul li a {
+  		text-align: left;
+  	}
+  	.side-nav .logo i {
+  		padding-left: 0;
+  	}
+  	.side-nav .logo span {
+  		display: inline-block;
+  	}
+    .main-content {
+        margin-left: 250px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+      .col-6 {
+          margin-bottom: 10px;
+          padding-top: 5px;
+      }
+  }
+
+  @media screen and (max-width: 989px) {
+      .side-nav {
+          padding-bottom: 100vh;
+      }
+  }
+
+  @media screen and (max-width: 363px) {
+      .navbar-brand {
+          width: 200px;
+          max-width: 105%;
+          margin-left: 110px;
+      }
+      .logo {
+          width: 155px;
+          margin-left: 25px;
+          margin-top: 5px;
+      }
+      .main {
+          padding: 20px;
+          padding-top: 50px;
+      }
+      .widget {
+          margin: 15px;
+          height: 200px;
+      }
+  }
+
+
+  @media screen and (max-width: 363px) {
+      .stand {
+          transform: translateX(30%);
+      }
+      .dashBG {
+          transform: translateX(30%);
+      }
+  }
+
+  @media screen and (max-width: 992px) {
+      .col-6 {
+          font-size: 12px;
+      }
+  }
+
+  @media screen and (min-width:768px){
+    .navbar-brand-centered {
+        position: absolute;
+        left: 50%;
+        display: block;
+        width: 160px;
+        text-align: center;
+        background-color: #eee;
+    }
+    .navbar>.container .navbar-brand-centered,
+    .navbar>.container-fluid .navbar-brand-centered {
+        margin-left: -80px;
+    }
+}
+
+#motto {
+    background-color: #222224;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.social a {
+  margin-right: 0.5rem;
+  padding-top: 0px;
+  color: white;}
+
+  .social a:hover {
+    margin-right: 0.5rem;
+    padding-top: 0px;
+    color: white;
+    text-decoration: none;}
+
+#showcase {
+  background: url(../img/stands.jpg) no-repeat top center fixed/cover;
+  position: relative;
+  min-height: 450px;
+  color: #fff;
+  padding-top: 6rem; }
+  #showcase .home-search {
+    min-height: 650px;
+    position: relative;
+    border-radius: 5px; }
+  #showcase .overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.8); }
+
+#services {
+  background: url(../img/engine1.jpg) no-repeat top center fixed/cover;
+  min-height: 300px;
+  position: relative;
+  overflow: hidden; }
+  #services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    background: rgba(15, 18, 21, 0.68); }
+
+#showcase-inner {
+  background: url(../img/engine1.jpg) no-repeat top center fixed/cover;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px; }
+  #showcase-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    width: 100%;
+    background: rgba(15, 18, 21, 0.68); }
+  #showcase-inner.showcase-search {
+    min-height: 270px; }
+
+#work {
+  padding: 6rem 0; }
+
+.listing-preview a {
+  position: relative; }
+
+@media (max-width: 991px) {
+  #showcase {
+    padding-top: 4rem; }
+    #showcase h1 {
+      font-size: 40px; }
+  .hide-md-down {
+    display: none; } }
+
+@media (max-width: 768px) {
+  #showcase {
+    padding-top: 3rem; }
+    #showcase h1 {
+      font-size: 40px; }
+    #showcase p {
+      display: none; }
+  #top-bar {
+    text-align: center; }
+    #top-bar .social {
+      text-align: center !important; } }
+
+@media (max-width: 576px) {
+  #showcase h1 {
+    font-size: 30px; }
+  #showcase-inner h1 {
+    font-size: 40px; } }
+
+    @media (max-width: @screen-xs) {
+        body{font-size: 10px;}
+    }
